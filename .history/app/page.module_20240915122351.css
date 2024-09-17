@@ -47,12 +47,6 @@
   font-size: 1.5rem;
 }
 
-.newsLink {
-  position: absolute;
-  right: -40px;
-  bottom: -40px;
-}
-
 .list {
   border-bottom: 1px solid var(--color-border-light);
 }
@@ -91,20 +85,6 @@
   border-radius: var(--border-radius);
   white-space: nowrap;
   font-size: 1rem;
-}
-
-.data {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 0.8rem 0;
-  font-size: 1rem;
-}
-
-@media (max-width: 1000px) {
-  .news {
-    width: calc(100% - 160px);
-  }
 }
 
 .newsLink {

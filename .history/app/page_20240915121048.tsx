@@ -1,6 +1,5 @@
 import style from "./page.module.css";
 import Image from "next/image";
-import ButtonLink from "@/app/_components/ButtonLink";
 
 type News = {
   id: "string";
@@ -61,7 +60,7 @@ export default function Home() {
       <section className={style.news}>
         <h2 className={style.newsTitle}>News</h2>
         <ul>
-          {sliceData.map((article) => (
+          {data.contents.map((article) => (
             <li key={article.id} className={style.list}>
               <div className={style.link}>
                 <Image className={style.image} src="/no-image.png" alt="No Image" width={1200} height={630} />
@@ -79,9 +78,6 @@ export default function Home() {
             </li>
           ))}
         </ul>
-        <div className={style.newsLink}>
-          <ButtonLink hred="/news">もっとみる</ButtonLink>
-        </div>
       </section>
     </>
   );

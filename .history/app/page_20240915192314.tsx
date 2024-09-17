@@ -1,6 +1,7 @@
 import style from "./page.module.css";
 import Image from "next/image";
 import ButtonLink from "@/app/_components/ButtonLink";
+import { News } from "@/app/_libs/microcms";
 
 type News = {
   id: "string";

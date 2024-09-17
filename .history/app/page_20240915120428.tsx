@@ -1,6 +1,5 @@
 import style from "./page.module.css";
 import Image from "next/image";
-import ButtonLink from "@/app/_components/ButtonLink";
 
 type News = {
   id: "string";
@@ -47,7 +46,6 @@ const data: {
 };
 
 export default function Home() {
-  const sliceData = data.contents.slice(0, 2);
   const name = "世界";
   return (
     <>
@@ -61,16 +59,32 @@ export default function Home() {
       <section className={style.news}>
         <h2 className={style.newsTitle}>News</h2>
         <ul>
-          {sliceData.map((article) => (
+          {data.contents.map((article) => (
             <li key={article.id} className={style.list}>
               <div className={style.link}>
-                <Image className={style.image} src="/no-image.png" alt="No Image" width={1200} height={630} />
+                <Image
+                  className={style.image}
+                  src="/no-image.png"
+                  alt="No Image"
+                  width={1200}
+                  height={630}
+                />
                 <dl className={style.content}>
-                  <dt className={style.newsItemTitle}>{article.title}</dt>
+                  <dt className={style.newsItemTitle}>
+                    {article.title}
+                  </dt>
                   <dd className={style.meta}>
-                    <span className={style.tag}>{article.category.name}</span>
+                    <span className={style.tag}>
+                      {article.category.name}
+                    </span>
                     <span className={style.date}>
-                      <Image src="/clock.svg" alt="" width={16} height={16} priority />
+                      <Image
+                        src="/clock.svg"
+                        alt=""
+                        width={16}
+                        height={16}
+                        priority
+                      />
                       {article.publishedAt}
                     </span>
                   </dd>
@@ -79,10 +93,7 @@ export default function Home() {
             </li>
           ))}
         </ul>
-        <div className={style.newsLink}>
-          <ButtonLink hred="/news">もっとみる</ButtonLink>
-        </div>
       </section>
     </>
-  );
+};
 }

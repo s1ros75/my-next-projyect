@@ -47,7 +47,8 @@ const data: {
 };
 
 export default function Home() {
-  const sliceData = data.contents.slice(0, 2);
+  // const sliceData = data.contents.slice(0, 2);
+  const sliceData = (News = []);
   const name = "世界";
   return (
     <>
@@ -79,7 +80,7 @@ export default function Home() {
             </li>
           ))}
         </ul>
-        <div className={style.newsLink}>
+        <div className="{style.newsLink">
           <ButtonLink hred="/news">もっとみる</ButtonLink>
         </div>
       </section>

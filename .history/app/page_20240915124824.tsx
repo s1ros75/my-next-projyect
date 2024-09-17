@@ -1,6 +1,6 @@
 import style from "./page.module.css";
 import Image from "next/image";
-import ButtonLink from "@/app/_components/ButtonLink";
+import ButtonLink
 
 type News = {
   id: "string";
@@ -79,9 +79,6 @@ export default function Home() {
             </li>
           ))}
         </ul>
-        <div className={style.newsLink}>
-          <ButtonLink hred="/news">もっとみる</ButtonLink>
-        </div>
       </section>
     </>
   );

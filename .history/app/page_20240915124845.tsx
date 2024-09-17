@@ -79,9 +79,6 @@ export default function Home() {
             </li>
           ))}
         </ul>
-        <div className={style.newsLink}>
-          <ButtonLink hred="/news">もっとみる</ButtonLink>
-        </div>
       </section>
     </>
   );
